@@ -89,11 +89,21 @@ MongoProbe.prototype.attach = function(name, target) {
             return rc;
       });
 
+    that.aspectCollectionMethod(coll, "bulkWrite");
     that.aspectCollectionMethod(coll, "insert");
+    that.aspectCollectionMethod(coll, "insertMany");
+    that.aspectCollectionMethod(coll, "insertOne");
     that.aspectCollectionMethod(coll, "save");
     that.aspectCollectionMethod(coll, "update");
+    that.aspectCollectionMethod(coll, "updateMany");
+    that.aspectCollectionMethod(coll, "updateOne");
     that.aspectCollectionMethod(coll, "remove");
+    that.aspectCollectionMethod(coll, "deleteMany");
+    that.aspectCollectionMethod(coll, "deleteOne");
     that.aspectCollectionMethod(coll, "findOne");
+    that.aspectCollectionMethod(coll, "findOneAndDelete");
+    that.aspectCollectionMethod(coll, "findOneAndReplace");
+    that.aspectCollectionMethod(coll, "findOneAndUpdate");
     that.aspectCollectionMethod(coll, "count");
     that.aspectCollectionMethod(coll, "findAndModify");
     that.aspectCollectionMethod(coll, "findAndRemove");
